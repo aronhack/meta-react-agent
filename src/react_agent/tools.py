@@ -25,4 +25,25 @@ async def search(query: str) -> Optional[dict[str, Any]]:
     return cast(dict[str, Any], await wrapped.ainvoke({"query": query}))
 
 
-TOOLS: List[Callable[..., Any]] = [search]
+async def query_database(query: str) -> Optional[dict[str, Any]]:
+    """Query the database.
+
+    This function queries the database for the given query.
+    """
+    return
+
+
+async def generate_image(query: str) -> Optional[dict[str, Any]]:
+    """Generate an image.
+
+    This function generates an image based on the given query.
+    """
+    return
+
+
+async def send_telegram_message(message: str) -> Optional[dict[str, Any]]:
+    """Send a message to Telegram.
+
+    This function sends a message to Telegram.
+    """
+    return
